@@ -15,48 +15,48 @@ import java.util.ArrayList;
 
 public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> {
 
-    private Context mContext;
-    private ArrayList<String> mImages;
-    private LayoutInflater mInflater;
+	private Context           mContext;
+	private ArrayList<String> mImages;
+	private LayoutInflater    mInflater;
 
-    public ImageAdapter(Context context) {
-        mContext = context;
-        this.mInflater = LayoutInflater.from(mContext);
-    }
+	public ImageAdapter(Context context) {
+		mContext = context;
+		this.mInflater = LayoutInflater.from(mContext);
+	}
 
-    public ArrayList<String> getImages() {
-        return mImages;
-    }
+	public ArrayList<String> getImages() {
+		return mImages;
+	}
 
-    @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = mInflater.inflate(R.layout.adapter_image, parent, false);
-        return new ViewHolder(view);
-    }
+	@Override
+	public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+		View view = mInflater.inflate(R.layout.adapter_image, parent, false);
+		return new ViewHolder(view);
+	}
 
-    @Override
-    public void onBindViewHolder(final ViewHolder holder, final int position) {
-        final String image = mImages.get(position);
-        Glide.with(mContext).load(new File(image)).into(holder.ivImage);
-    }
+	@Override
+	public void onBindViewHolder(final ViewHolder holder, final int position) {
+		final String image = mImages.get(position);
+		Glide.with(mContext).load(new File(image)).into(holder.ivImage);
+	}
 
-    @Override
-    public int getItemCount() {
-        return mImages == null ? 0 : mImages.size();
-    }
+	@Override
+	public int getItemCount() {
+		return mImages == null ? 0 : mImages.size();
+	}
 
-    public void refresh(ArrayList<String> images) {
-        mImages = images;
-        notifyDataSetChanged();
-    }
+	public void refresh(ArrayList<String> images) {
+		mImages = images;
+		notifyDataSetChanged();
+	}
 
-    static class ViewHolder extends RecyclerView.ViewHolder {
+	static class ViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView ivImage;
+		ImageView ivImage;
 
-        public ViewHolder(View itemView) {
-            super(itemView);
-            ivImage = itemView.findViewById(R.id.iv_image);
-        }
-    }
+		public ViewHolder(View itemView) {
+			super(itemView);
+			ivImage = itemView.findViewById(R.id.iv_image);
+		}
+	}
 }
