@@ -1,6 +1,8 @@
 # ImageSelector
 LuBan图片压缩+ImageSelector实现9张图片或者无限图片批量选择压缩 
+LuBan image compression +ImageSelector to achieve 9 images or unlimited image batch selection compression 
 下面是我用imageSelector+Luban实现的9图批量选择+图片压缩的效果图，感谢原作者的开源 
+The following is the rendering of batch selection + image compression of 9 images I implemented with imageSelector+Luban, thanks to the original author's open source 
 ![gif](https://github.com/307572384/ImageSelector-masteraddLuban/blob/master/gif/device-2019-04-01-132747.gif?raw=true) 
 先上效果图：
 
