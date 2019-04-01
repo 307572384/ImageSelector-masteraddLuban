@@ -132,9 +132,12 @@ REQUEST_CODE就是调用者自己定义的启动Activity时的requestCode，这�
      		* 当为true时，图片返回的结果有且只有一张图片。
 		*/
 	    boolean isCameraImage = data.getBooleanExtra(ImageSelector.IS_CAMERA_IMAGE, false);
+	    
         }
     }
 ```
 ImageSelectorUtils.SELECT_RESULT是接收数据的key。数据是以ArrayList的字符串数组返回的，就算是单选，返回的也是ArrayList数组，只不过这时候ArrayList只有一条数据而已。ArrayList里面的数据就是选中的图片的文件路径。
 
 想要了解ImageSelector的实现思路和核心代码的同学请看这里：[Android 实现一个仿微信的图片选择器](http://blog.csdn.net/u010177022/article/details/70147243)
+下面是我用imageSelector+Luban实现的9图批量选择+图片压缩的效果图，感谢原作者的开源
+![gif](https://github.com/307572384/ImageSelector-masteraddLuban/blob/master/gif/device-2019-04-01-132747.gif?raw=true) 
